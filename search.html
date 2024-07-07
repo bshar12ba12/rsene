@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة البحث - شركة رسيني</title>
+    <link rel="icon" href="file.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        img.thumbnail {
+            width: 100px; /* حجم الصورة المصغرة */
+            height: auto;
+            margin-bottom: 20px; /* مساحة بين الصورة والعنوان */
+            opacity: 0; /* لجعل الصورة مخفية في البداية */
+            animation: fadeIn 5s forwards; /* تطبيق تأثير الدخول */
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            font-size: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px; /* مساحة بين الرابط وعناصر النموذج */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+        #a {
+            text-decoration: none;
+            color: #f00000; /* استبدل #000000 بأي لون تريده */
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <img src="file.png" alt="شركة رسني" class="thumbnail">
+    <h1>شركة رسيني</h1>
+    <br>
+    <h2> الرجاء كتابة الاسم الثلاثي كما هو في الهوية او كما ارسلها لك مرسل الحوالة </h2>
+    
+    <input type="text" id="nameInput" placeholder="أدخل اسمك" required>
+    <button onclick="checkName()">بحث</button>
+    <div id="message" class="message"></div>
+    <br>
+    <a href="home.html" id="a">العودة إلى الصفحة الرئيسية</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
